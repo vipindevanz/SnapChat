@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.angel.snapchat.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
-
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         btnSignUp.setOnClickListener {
-            startActivity(Intent(applicationContext, SignUpActivity::class.java))
+            startActivity(Intent(applicationContext, MainActivity::class.java))
         }
     }
 }

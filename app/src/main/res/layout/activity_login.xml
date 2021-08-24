@@ -46,11 +46,14 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/light_black"
                 android:text="IN + 91"
+                android:enabled="false"
                 android:textColor="@color/blue" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
                 android:backgroundTint="@color/light_black"
                 android:hint="9848741236" />
 

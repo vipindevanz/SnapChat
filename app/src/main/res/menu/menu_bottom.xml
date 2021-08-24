@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Map"
+        android:icon="@drawable/ic_location"
+        android:id="@+id/mapFragment"/>
+
+    <item
+        android:title="Chat"
+        android:icon="@drawable/ic_chat"
+        android:id="@+id/chatFragment"/>
+
+    <item
+        android:title="Camera"
+        android:icon="@drawable/ic_camera"
+        android:id="@+id/cameraFragment"/>
+
+    <item
+        android:title="Stories"
+        android:icon="@drawable/ic_stories"
+        android:id="@+id/storiesFragment"/>
+
+    <item
+        android:title="Spotlight"
+        android:icon="@drawable/ic_play"
+        android:id="@+id/spotLightFragment"/>
+
+</menu>
