@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SnapChat"
         tools:ignore="AllowBackup">
-        <activity android:name=".activity.SignUpActivity"></activity>
+        <activity
+            android:name=".activity.Verify"
+            android:exported="true" />
+        <activity android:name=".activity.SignUpActivity" />
         <activity
             android:name=".activity.LoginActivity"
             android:windowSoftInputMode="adjustResize" />

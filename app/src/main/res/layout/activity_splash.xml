@@ -8,12 +8,12 @@
     tools:context=".activity.SplashActivity">
 
     <ImageView
+        android:id="@+id/imgLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:id="@+id/imgLogo"
         android:layout_centerHorizontal="true"
-        android:adjustViewBounds="true"
         android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
         android:src="@drawable/snapchat_logo" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
