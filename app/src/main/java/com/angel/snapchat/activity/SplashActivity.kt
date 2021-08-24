@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         btnSignUp.setOnClickListener {
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, SignUpActivity::class.java))
         }
     }
 }
