@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -54,8 +57,8 @@ dependencies {
     implementation 'io.github.chaosleung:pinview:1.4.4'
 
     // maps k liye
-    implementation 'com.google.android.gms:play-services-maps:11.8.0'
-    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 
 
 
