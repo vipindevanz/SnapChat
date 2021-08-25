@@ -40,13 +40,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activity.MapsActivity"
-            android:exported="true"
-            android:label="@string/title_activity_maps" />
-        <activity
             android:name=".activity.Verify"
-            android:exported="true" />
-        <activity android:name=".activity.SignUpActivity" />
+             />
+
+
         <activity
             android:name=".activity.LoginActivity"
             android:windowSoftInputMode="adjustResize" />

@@ -7,19 +7,24 @@
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/drawable/ic_login.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/drawable/ic_verify.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_main.xml" value="0.115625" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_main.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_maps.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_sign_up.xml" value="0.11499493414387031" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_splash.xml" value="0.1015625" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/activity_verify.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_camera.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_chat.xml" value="0.115625" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_map.xml" value="0.1" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_maps.xml" value="0.115625" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_spot_light.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/fragment_stories.xml" value="0.115625" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/ic_launcher_foreground.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/layout/video_row.xml" value="0.115625" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat/app/src/main/res/menu/menu_bottom.xml" value="0.115625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
