@@ -11,6 +11,7 @@ import com.angel.snapchat.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
+class MainActivity : AppCompatActivity() {
 class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +20,10 @@ class MainActivity : AppCompatActivity(){
         val navController = findNavController(R.id.fragmentContainer)
         bottomNav.setupWithNavController(navController)
 
+        bottomNav.itemIconTintList = null
 
     }
 
+    }
 
 }

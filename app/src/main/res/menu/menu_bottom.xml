@@ -2,28 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Map"
-        android:icon="@drawable/ic_location"
-        android:id="@+id/mapFragment"/>
+        android:id="@+id/mapFragment"
+        android:icon="@drawable/map_selector"
+        android:title="@string/map" />
 
     <item
-        android:title="Chat"
-        android:icon="@drawable/ic_chat"
-        android:id="@+id/chatFragment"/>
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/chat_selector"
+        android:title="@string/chat" />
 
     <item
-        android:title="Camera"
-        android:icon="@drawable/ic_camera"
-        android:id="@+id/cameraFragment"/>
+        android:id="@+id/cameraFragment"
+        android:icon="@drawable/camera_selector"
+        android:title="@string/camera" />
 
     <item
-        android:title="Stories"
-        android:icon="@drawable/ic_stories"
-        android:id="@+id/storiesFragment"/>
+        android:id="@+id/storiesFragment"
+        android:icon="@drawable/stories_selector"
+        android:title="@string/stories" />
 
     <item
-        android:title="Spotlight"
-        android:icon="@drawable/ic_play"
-        android:id="@+id/spotLightFragment"/>
+        android:id="@+id/spotLightFragment"
+        android:icon="@drawable/spotlight_selector"
+        android:title="@string/spotlight" />
 
 </menu>

@@ -1,60 +1,50 @@
 package com.angel.snapchat.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
+import com.angel.snapchat.adapter.VideoAdapter
+import com.angel.snapchat.model.VideoModel
+import kotlinx.android.synthetic.main.fragment_spot_light.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SpotLightFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SpotLightFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var list: List<VideoModel>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        buildList()
+        setAdapter()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_spot_light, container, false)
+    private fun setAdapter() {
+        viewPager.adapter = VideoAdapter(list)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SpotLightFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SpotLightFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun buildList() {
+
+        list = ArrayList()
+
+        (list as ArrayList<VideoModel>).add(
+            VideoModel(
+                "https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/Snaptik_6821163459892235522_suzuka.mp4?alt=media&token=84224f2f-0606-43e5-ac77-7fffa852f2ff",
+                "@neharajak",
+                "https://cdn.pixabay.com/photo/2018/08/15/07/19/indian-flag-3607410__340.jpg",
+                "Helllo",
+                listOf("#spotlight", "#comedy"),
+            )
+        )
+
+        (list as ArrayList<VideoModel>).add(
+            VideoModel(
+                "https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/Snaptik_6821163459892235522_suzuka.mp4?alt=media&token=84224f2f-0606-43e5-ac77-7fffa852f2ff",
+                "@neharajak",
+                "https://cdn.pixabay.com/photo/2018/08/15/07/19/indian-flag-3607410__340.jpg",
+                "Helllo",
+                listOf("#snapchat", "#fun"),
+            )
+        )
     }
 }

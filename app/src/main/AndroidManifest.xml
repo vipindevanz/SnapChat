@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.angel.snapchat">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -23,6 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SnapChat"
         tools:ignore="AllowBackup">
+        <activity android:name=".activity.SignUpActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
