@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mapFragment"
+        android:id="@+id/mapsFragment"
         android:icon="@drawable/map_selector"
         android:title="@string/map" />
 
