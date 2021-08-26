@@ -61,10 +61,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    //    PinView
+
+    //    PinView @ OTP layout
     implementation 'io.github.chaosleung:pinview:1.4.4'
 
-    // maps k liye
+    //  For map
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
 }

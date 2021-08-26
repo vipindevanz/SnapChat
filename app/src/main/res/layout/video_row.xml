@@ -27,7 +27,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
@@ -42,6 +41,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/like"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_like" />
 

@@ -1,7 +1,6 @@
 package com.angel.snapchat.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
@@ -13,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_spot_light.*
 class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
 
     lateinit var list: ArrayList<VideoModel>
-    lateinit var reference: DatabaseReference
+    private lateinit var reference: DatabaseReference
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

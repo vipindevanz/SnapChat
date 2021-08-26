@@ -1,6 +1,7 @@
 package com.angel.snapchat.viewholder
 
 import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.angel.snapchat.model.VideoModel
 import com.bumptech.glide.Glide
@@ -8,9 +9,13 @@ import kotlinx.android.synthetic.main.video_row.view.*
 
 class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+    lateinit var likeView : ImageView
+
     fun setData(model: VideoModel) {
 
         itemView.apply {
+
+            likeView = like
 
             videoView.setVideoPath(model.videoUrl)
             Glide.with(imgProfile).load(model.profileImgUrl).into(imgProfile)
