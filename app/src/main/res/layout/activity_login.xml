@@ -45,17 +45,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/light_black"
-                android:text="IN + 91"
                 android:enabled="false"
+                android:text="IN + 91"
                 android:textColor="@color/blue" />
 
             <EditText
+                android:id="@+id/phoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLength="10"
                 android:backgroundTint="@color/light_black"
-                android:hint="9848741236" />
+                android:hint="9848741236"
+                android:inputType="number"
+                android:maxLength="10" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -65,49 +66,31 @@
             android:text="Use email or username instead"
             android:textColor="@color/blue" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="password"
-            android:textAllCaps="true"
-            android:textColor="@color/blue" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:backgroundTint="@color/light_black"
-            app:hintTextColor="@color/light_black"
-            android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:inputType="textVisiblePassword" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/forgotPassword"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:text="Forgot your password?"
             android:textColor="@color/blue" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:padding="15dp"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        android:id="@+id/btnLogIn"
         android:text="Log In"
         android:textColor="@color/white"
         app:backgroundTint="@color/blue"

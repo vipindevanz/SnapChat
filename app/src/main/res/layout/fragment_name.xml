@@ -10,7 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical">
 
         <TextView
@@ -50,7 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By tapping on Sign up and Accept , you acknowledge that you have read the Privacy Policy and agree to the Terms of service"/>
+            android:text="By tapping on Sign up and Accept , you acknowledge that you have read the Privacy Policy and agree to the Terms of service" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
