@@ -1,18 +1,17 @@
 package com.angel.snapchat.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.angel.snapchat.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_verify.*
 
-class Verify : AppCompatActivity() {
+class VerifyActivity : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,16 +20,16 @@ class Verify : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val storedVerificationId = intent.getStringExtra("storedVerificationId")
+        val bundle = intent.extras
 
-//        Reference
-        val verify = findViewById<Button>(R.id.verifyBtn)
-        val otpGiven = findViewById<EditText>(R.id.id_otp)
-
+        val storedVerificationId = bundle?.get("verificationId")
 
         verify.setOnClickListener {
-            var otp = otpGiven.text.toString().trim()
-            if (!otp.isEmpty()) {
+
+            val otp = otp.text.toString().trim()
+
+            if (otp.isNotEmpty()) {
+
                 val credential: PhoneAuthCredential = PhoneAuthProvider.getCredential(
                     storedVerificationId.toString(), otp
                 )
@@ -39,24 +38,35 @@ class Verify : AppCompatActivity() {
                 Toast.makeText(this, "Enter OTP", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
-                    finish()
-// ...
+                    saveData()
+
                 } else {
-// Sign in failed, display a message and update the UI
+
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
-// The verification code entered was invalid
+
                         Toast.makeText(this, "Invalid OTP", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
     }
-}
 
+    private fun saveData() {
+
+
+        switchToAddFriends()
+    }
+
+    private fun switchToAddFriends() {
+
+        val intent = Intent(this, AddFriendsActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+}

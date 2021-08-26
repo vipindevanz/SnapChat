@@ -1,22 +1,24 @@
 package com.angel.snapchat.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
 import com.angel.snapchat.adapter.VideoAdapter
 import com.angel.snapchat.model.VideoModel
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_spot_light.*
 
 class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
 
-    lateinit var list: List<VideoModel>
+    lateinit var list: ArrayList<VideoModel>
+    lateinit var reference: DatabaseReference
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         buildList()
-        setAdapter()
     }
 
     private fun setAdapter() {
@@ -25,26 +27,30 @@ class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
 
     private fun buildList() {
 
+        reference = FirebaseDatabase.getInstance().getReference("videos")
         list = ArrayList()
 
-        (list as ArrayList<VideoModel>).add(
-            VideoModel(
-                "https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/Snaptik_6821163459892235522_suzuka.mp4?alt=media&token=84224f2f-0606-43e5-ac77-7fffa852f2ff",
-                "@neharajak",
-                "https://cdn.pixabay.com/photo/2018/08/15/07/19/indian-flag-3607410__340.jpg",
-                "Helllo",
-                listOf("#spotlight", "#comedy"),
-            )
-        )
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
 
-        (list as ArrayList<VideoModel>).add(
-            VideoModel(
-                "https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/Snaptik_6821163459892235522_suzuka.mp4?alt=media&token=84224f2f-0606-43e5-ac77-7fffa852f2ff",
-                "@neharajak",
-                "https://cdn.pixabay.com/photo/2018/08/15/07/19/indian-flag-3607410__340.jpg",
-                "Helllo",
-                listOf("#snapchat", "#fun"),
-            )
-        )
+                if (snapshot.exists()) {
+
+                    for (data in snapshot.children) {
+
+                        val videoModel = data.getValue(VideoModel::class.java)
+
+                        if (videoModel != null) {
+                            list.add(videoModel)
+                        }
+                    }
+
+                    setAdapter()
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
     }
 }

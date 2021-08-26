@@ -1,11 +1,13 @@
 package com.angel.snapchat.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.angel.snapchat.R
 import com.angel.snapchat.model.VideoModel
 import com.angel.snapchat.viewholder.VideoViewHolder
+import kotlinx.android.synthetic.main.video_row.view.*
 
 
 class VideoAdapter(private val mList: List<VideoModel>) : RecyclerView.Adapter<VideoViewHolder>() {

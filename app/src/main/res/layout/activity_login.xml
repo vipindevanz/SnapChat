@@ -10,7 +10,7 @@
         android:id="@+id/imgBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:src="@drawable/ic_back" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -75,6 +75,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            android:backgroundTint="@color/light_black"
+            app:hintTextColor="@color/light_black"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
 
@@ -89,6 +91,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:id="@+id/forgotPassword"
+            android:layout_gravity="center"
             android:text="Forgot your password?"
             android:textColor="@color/blue" />
 
@@ -100,7 +104,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:padding="10dp"
+        android:padding="15dp"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:id="@+id/btnLogIn"

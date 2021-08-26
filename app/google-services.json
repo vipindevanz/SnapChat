@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "220744457606",
+    "firebase_url": "https://snapchat-f2264-default-rtdb.firebaseio.com",
     "project_id": "snapchat-f2264",
     "storage_bucket": "snapchat-f2264.appspot.com"
   },
@@ -19,6 +20,14 @@
           "android_info": {
             "package_name": "com.angel.snapchat",
             "certificate_hash": "1c18eca98dc8c068cc4f2ccbb599c707988fa8c9"
+          }
+        },
+        {
+          "client_id": "220744457606-lnesqiavq9pb8b15bj6uch5g718tbiib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.snapchat",
+            "certificate_hash": "bc3b0fee09ff7e04034f837846b9862c23a4e480"
           }
         },
         {

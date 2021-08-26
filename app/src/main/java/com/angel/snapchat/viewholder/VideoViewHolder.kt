@@ -1,6 +1,5 @@
 package com.angel.snapchat.viewholder
 
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.angel.snapchat.model.VideoModel
@@ -13,18 +12,16 @@ class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         itemView.apply {
 
-            Log.d("ok", model.videoUrl + "\n")
-
             videoView.setVideoPath(model.videoUrl)
             Glide.with(imgProfile).load(model.profileImgUrl).into(imgProfile)
 
             username.text = model.username
             songName.text = model.musicName
-            tag1.text = model.tags[0]
-            tag2.text = model.tags[1]
+            tag1.text = model.tag1
+            tag2.text = model.tag2
 
             videoView.setOnPreparedListener {
-                progressBar.visibility = View.GONE
+                progressBar.visibility = View.INVISIBLE
                 it.start()
 
                 val videoRatio: Float = it.videoWidth / it.videoHeight.toFloat()

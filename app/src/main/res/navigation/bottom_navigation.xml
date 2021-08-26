@@ -6,6 +6,11 @@
     app:startDestination="@id/cameraFragment">
 
     <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.angel.snapchat.fragment.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
         android:id="@+id/chatFragment"
         android:name="com.angel.snapchat.fragment.ChatFragment"
         android:label="fragment_chat"
@@ -25,9 +30,5 @@
         android:name="com.angel.snapchat.fragment.SpotLightFragment"
         android:label="fragment_spot_light"
         tools:layout="@layout/fragment_spot_light" />
-    <fragment
-        android:id="@+id/mapsFragment"
-        android:name="com.angel.snapchat.fragment.MapsFragment"
-        android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+
 </navigation>

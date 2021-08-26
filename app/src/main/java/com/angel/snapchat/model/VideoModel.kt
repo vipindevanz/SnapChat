@@ -2,9 +2,11 @@ package com.angel.snapchat.model
 
 data class VideoModel(
 
-    val videoUrl: String,
-    val username: String,
-    val profileImgUrl: String,
-    val musicName: String,
-    val tags : List<String>
+    var id: String = "",
+    var videoUrl: String = "",
+    var username: String = "",
+    var profileImgUrl: String = "",
+    var musicName: String = "",
+    var tag1: String = "",
+    var tag2: String = ""
 )
