@@ -36,10 +36,13 @@
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat26august/app/src/main/res/layout/fragment_name.xml" value="0.11499493414387031" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat26august/app/src/main/res/layout/fragment_password.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat26august/app/src/main/res/layout/fragment_username.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat28august/app/src/main/res/drawable/circle_bg.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat28august/app/src/main/res/layout/activity_verify.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/Sumit Rai/Desktop/web/SnapChat28august/app/src/main/res/layout/fragment_camera.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

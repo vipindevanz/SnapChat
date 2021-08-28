@@ -42,4 +42,5 @@
     <string name="instruction">Add your friends to send Snaps and view their\nStories!</string>
     <string name="snap_map">Snap Map</string>
     <string name="add">Add</string>
+    <string name="take_photo" />
 </resources>
