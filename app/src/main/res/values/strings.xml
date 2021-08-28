@@ -1,11 +1,45 @@
 <resources>
     <string name="app_name">Snapchat</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="map">Map</string>
     <string name="chat">Chat</string>
     <string name="spotlight">Spotlight</string>
     <string name="stories">Stories</string>
     <string name="camera">Camera</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="your_username">Your username</string>
+    <string name="change_my_username">Change my username</string>
+    <string name="next">Continue</string>
+    <string name="friends">Friends</string>
+    <string name="friends_stories_will_appear_here">Friends stories will appear here!</string>
+    <string name="add_friends">Add Friends</string>
+    <string name="discover">Discover</string>
+    <string name="set_a_password">Set a password</string>
+    <string name="your_password_should_be_8_characters_long">Your password should be 8 characters long</string>
+    <string name="password">Password</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="agreement">By tapping on Sign up and Accept , you acknowledge that you have read the Privacy Policy and agree to the Terms of service</string>
+    <string name="sign_up_amp_accept"><![CDATA[Sign up & Accept]]></string>
+    <string name="quick_add">Quick Add</string>
+    <string name="birthday">birthday</string>
+    <string name="when_s_your_birthday">When\'s your birthday?</string>
+    <string name="what_s_your_mobile_number">What\'s your mobile number</string>
+    <string name="sign_up_with_email_instead">Sign up with email instead</string>
+    <string name="mobile_number">mobile number</string>
+    <string name="in_91">IN + 91</string>
+    <string name="_9848741236">9848741236</string>
+    <string name="we_ll_send_you_a_text_verification_code">We\'ll send you a text verification code</string>
+    <string name="confirm">Enter the confirmation code which we have just senton your mobile number</string>
+    <string name="enter_confirmation_code">Enter confirmation code</string>
+    <string name="verify_otp">Verify Otp</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="phone_number">phone number</string>
+    <string name="use_email_or_username_instead">Use email or username instead</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="done">Done</string>
+    <string name="instruction">Add your friends to send Snaps and view their\nStories!</string>
+    <string name="snap_map">Snap Map</string>
+    <string name="add">Add</string>
 </resources>

@@ -10,25 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="@dimen/dp_20"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter confirmation code"
+            android:text="@string/enter_confirmation_code"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Enter the confirmation code which we have just sent\on your mobile number"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/confirm"
             android:textAlignment="center" />
 
         <com.chaos.view.PinView
@@ -36,15 +33,13 @@
             style="@style/PinWidget.PinView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/dp_20"
             android:cursorVisible="true"
             android:inputType="number"
-            android:itemBackground="#F4F6F9"
-            android:textColor="#1F1F1F"
             app:hideLineWhenFilled="true"
             app:itemCount="6"
-            app:itemRadius="5dp"
-            app:lineColor="#2196F3" />
+            app:itemRadius="@dimen/dp_5"
+            app:lineColor="@color/blue" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -54,10 +49,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:text="Verify Otp"
+        android:layout_margin="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35"
+        android:text="@string/verify_otp"
         app:backgroundTint="@color/blue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 </RelativeLayout>

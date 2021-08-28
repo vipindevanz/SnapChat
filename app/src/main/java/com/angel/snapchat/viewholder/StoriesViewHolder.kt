@@ -4,7 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.angel.snapchat.model.StoriesModel
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.stories_layout.view.*
+import kotlinx.android.synthetic.main.stories_row_item.view.*
 
 class StoriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -13,7 +13,6 @@ class StoriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.apply {
 
             Glide.with(thumbnail).load(model.thumbnail).into(thumbnail)
-            title.text = model.title
         }
     }
 }

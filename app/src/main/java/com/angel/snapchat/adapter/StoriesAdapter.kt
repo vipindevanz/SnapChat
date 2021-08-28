@@ -10,7 +10,7 @@ import com.angel.snapchat.viewholder.StoriesViewHolder
 class StoriesAdapter (private val list: List<StoriesModel>) : RecyclerView.Adapter<StoriesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoriesViewHolder {
         return StoriesViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.stories_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.stories_row_item, parent, false)
         )
     }
 

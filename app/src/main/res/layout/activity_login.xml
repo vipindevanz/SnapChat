@@ -10,29 +10,30 @@
         android:id="@+id/imgBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:src="@drawable/ic_back" />
+        android:padding="@dimen/dp_6"
+        android:src="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginEnd="@dimen/dp_20"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="phone number"
+            android:text="@string/phone_number"
             android:textAllCaps="true"
             android:textColor="@color/blue" />
 
@@ -47,7 +48,8 @@
                 android:backgroundTint="@color/light_black"
                 android:enabled="false"
                 android:text="IN + 91"
-                android:textColor="@color/blue" />
+                android:textColor="@color/blue"
+                tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
 
             <EditText
                 android:id="@+id/phoneNumber"
@@ -56,24 +58,24 @@
                 android:backgroundTint="@color/light_black"
                 android:hint="9848741236"
                 android:inputType="number"
-                android:maxLength="10" />
+                android:maxLength="10"
+                tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Use email or username instead"
+            android:text="@string/use_email_or_username_instead"
             android:textColor="@color/blue" />
-
 
         <TextView
             android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Forgot your password?"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/forgot_your_password"
             android:textColor="@color/blue" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -84,16 +86,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:padding="15dp"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
-        android:text="Log In"
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_50"
+        android:paddingEnd="@dimen/dp_50"
+        android:text="@string/log_in"
         android:textColor="@color/white"
         app:backgroundTint="@color/blue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 
 </RelativeLayout>

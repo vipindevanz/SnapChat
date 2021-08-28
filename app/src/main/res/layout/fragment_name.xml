@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
         android:layout_marginBottom="40dp"
         android:orientation="vertical">
 
@@ -20,40 +20,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="What's your name?"
+            android:text="@string/what_s_your_name"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="First name"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/first_name"
             android:textAllCaps="true"
             android:textColor="@color/blue" />
 
         <EditText
             android:id="@+id/fName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Last name"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/last_name"
             android:textAllCaps="true"
             android:textColor="@color/blue" />
 
         <EditText
             android:id="@+id/lName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By tapping on Sign up and Accept , you acknowledge that you have read the Privacy Policy and agree to the Terms of service" />
+            android:text="@string/agreement" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -63,11 +67,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:text="Sign up &amp; Accept"
+        android:layout_margin="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35"
+        android:text="@string/sign_up_amp_accept"
         app:backgroundTint="@color/blue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 
 </RelativeLayout>

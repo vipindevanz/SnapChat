@@ -17,18 +17,20 @@
 
             <ImageView
                 android:id="@+id/imgProfile"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_person" />
+                android:src="@drawable/ic_person"
+                tools:ignore="ContentDescription" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/dp_10"
                 android:layout_toEndOf="@+id/imgProfile"
-                android:src="@drawable/ic_search" />
+                android:src="@drawable/ic_search"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,19 +39,18 @@
                 android:layout_centerVertical="true"
                 android:text="@string/spotlight"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="@dimen/sp_22"
                 android:textStyle="bold" />
 
         </RelativeLayout>
-
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar" />
+        android:layout_below="@+id/toolbar"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" />
 
 </RelativeLayout>

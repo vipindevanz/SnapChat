@@ -11,12 +11,12 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentInsetStart="0dp">
+        app:contentInsetStart="@dimen/dp_0">
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:padding="5dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5">
 
             <RelativeLayout
                 android:id="@+id/imgProfile"
@@ -25,17 +25,19 @@
                 android:layout_centerVertical="true">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_centerInParent="true"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark" />
+                    android:src="@drawable/circle_bg_dark"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_person" />
+                    android:src="@drawable/ic_person"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
 
@@ -46,18 +48,20 @@
                 android:layout_toEndOf="@+id/imgProfile">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="@dimen/dp_20"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark" />
+                    android:src="@drawable/circle_bg_dark"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_search_black" />
+                    android:src="@drawable/ic_search_black"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
 
@@ -68,8 +72,9 @@
                 android:layout_centerVertical="true"
                 android:text="@string/stories"
                 android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
 
             <RelativeLayout
                 android:id="@+id/more"
@@ -79,17 +84,19 @@
                 android:layout_centerVertical="true">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_centerInParent="true"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark" />
+                    android:src="@drawable/circle_bg_dark"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_more_black" />
+                    android:src="@drawable/ic_more_black"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
 
@@ -100,18 +107,20 @@
                 android:layout_toStartOf="@+id/more">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="@dimen/dp_20"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark" />
+                    android:src="@drawable/circle_bg_dark"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
         </RelativeLayout>
@@ -122,10 +131,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_margin="5dp"
-        android:text="Friends"
+        android:layout_margin="@dimen/dp_5"
+        android:text="@string/friends"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         android:textStyle="bold" />
 
     <TextView
@@ -134,8 +143,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/friends"
         android:layout_centerHorizontal="true"
-        android:text="Friends stories will appear here!"
-        android:textSize="16sp" />
+        android:text="@string/friends_stories_will_appear_here"
+        android:textSize="@dimen/sp_16" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addFriends"
@@ -143,31 +152,41 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#C80CEA"
-        android:text="Add Friends"
+        android:layout_marginTop="@dimen/dp_10"
+        android:backgroundTint="@color/pink"
+        android:text="@string/add_friends"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        app:cornerRadius="100dp" />
+        android:textSize="@dimen/sp_18"
+        app:cornerRadius="@dimen/dp_5" />
 
     <TextView
         android:id="@+id/discover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addFriends"
-        android:layout_margin="5dp"
-        android:text="Discover"
+        android:layout_margin="@dimen/dp_5"
+        android:text="@string/discover"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="@dimen/sp_16"
         android:textStyle="bold" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/discover"
-        android:padding="2dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2" />
+        android:layout_below="@+id/discover">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_2"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+    </RelativeLayout>
 </RelativeLayout>

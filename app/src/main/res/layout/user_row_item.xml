@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -8,54 +9,64 @@
         android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="@dimen/dp_10">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/snapchat_logo" />
-
+            android:layout_width="@dimen/dp_50"
+            android:src="@drawable/snapchat_logo"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/dp_20"
             android:layout_toEndOf="@+id/imgProfile"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="RelativeOverlap">
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tanishq" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="tanishq" />
+                android:layout_height="wrap_content" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/add"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/add"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@+id/close"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/black"
+            app:cornerRadius="@dimen/dp_100"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="Add"
-            android:textColor="@color/black"
-            app:backgroundTint="#EEEEEE"
-            app:cornerRadius="100dp" />
-
+            android:src="@drawable/ic_close"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="@dimen/dp_0.5"
         android:layout_below="@+id/rl"
         android:background="@color/light_black" />
 

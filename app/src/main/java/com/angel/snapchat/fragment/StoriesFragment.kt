@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
 import com.angel.snapchat.adapter.StoriesAdapter
 import com.angel.snapchat.model.StoriesModel
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_stories.*
 
 class StoriesFragment : Fragment(R.layout.fragment_stories) {
 
     private lateinit var list: ArrayList<StoriesModel>
+    private lateinit var reference: DatabaseReference
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -20,173 +22,34 @@ class StoriesFragment : Fragment(R.layout.fragment_stories) {
 
     private fun buildList() {
 
+        reference = FirebaseDatabase.getInstance().getReference("stories")
         list = ArrayList()
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                if (snapshot.exists()) {
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                    for (data in snapshot.children) {
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                        val story = data.getValue(StoriesModel::class.java)
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                        if (story != null) {
+                            list.add(story)
+                        }
+                    }
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                    if (context != null) {
+                        progressBar.visibility = View.GONE
+                        list.shuffle()
+                        setAdapter()
+                    }
+                }
+            }
 
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-
-
-
-
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        list.add(
-            StoriesModel(
-                "A",
-                "tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        setAdapter()
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
     }
 
     private fun setAdapter() {

@@ -4,53 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7FF03"
+    android:background="@color/yellow"
     tools:context=".activity.SplashActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/dp_100"
         android:adjustViewBounds="true"
-        android:src="@drawable/snapchat_logo" />
+        android:src="@drawable/snapchat_logo"
+        tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:id="@+id/llBottom"
-        android:visibility="gone"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:layout_weight="1"
-            android:padding="15dp"
-            android:text="Log In"
+            android:padding="@dimen/dp_16"
+            android:text="@string/log_in"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:backgroundTint="@color/white"
-            app:cornerRadius="100dp" />
+            app:cornerRadius="@dimen/dp_100" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:layout_weight="1"
-            android:padding="15dp"
-            android:text="Sign Up"
+            android:padding="@dimen/dp_16"
+            android:text="@string/sign_up"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:backgroundTint="@color/blue"
-            app:cornerRadius="100dp" />
+            app:cornerRadius="@dimen/dp_100" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>

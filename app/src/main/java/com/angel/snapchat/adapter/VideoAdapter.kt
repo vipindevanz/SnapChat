@@ -12,7 +12,7 @@ class VideoAdapter(private val mList: List<VideoModel>) : RecyclerView.Adapter<V
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
         return VideoViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.video_row, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.video_row_item, parent, false)
         )
     }
 

@@ -5,11 +5,11 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.angel.snapchat.model.VideoModel
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.video_row.view.*
+import kotlinx.android.synthetic.main.video_row_item.view.*
 
 class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    lateinit var likeView : ImageView
+    lateinit var likeView: ImageView
 
     fun setData(model: VideoModel) {
 
@@ -21,7 +21,7 @@ class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             Glide.with(imgProfile).load(model.profileImgUrl).into(imgProfile)
 
             username.text = model.username
-            songName.text = model.musicName
+            song.text = model.musicName
             tag1.text = model.tag1
             tag2.text = model.tag2
 

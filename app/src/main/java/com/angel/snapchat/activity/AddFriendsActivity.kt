@@ -2,15 +2,18 @@ package com.angel.snapchat.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.angel.snapchat.R
 import com.angel.snapchat.adapter.UserAdapter
 import com.angel.snapchat.model.UserModel
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_add_friends.*
 
 class AddFriendsActivity : AppCompatActivity() {
 
     private lateinit var list: ArrayList<UserModel>
+    private lateinit var reference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,85 +31,37 @@ class AddFriendsActivity : AppCompatActivity() {
 
     private fun buildList() {
 
+        reference = FirebaseDatabase.getInstance().getReference("users")
         list = ArrayList()
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                if (snapshot.exists()) {
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                    for (data in snapshot.children) {
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                        val user = data.getValue(UserModel::class.java)
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                        if (user != null) {
+                            list.add(user)
+                        }
+                    }
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                    progressBar.visibility = View.GONE
+                    list.shuffle()
+                    setAdapter()
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
+                }
+            }
 
-        list.add(
-            UserModel(
-                "A",
-                "tanishq",
-                "Tanishq",
-                "https://lapaas.com/wp-content/uploads/2021/03/Shahrukh-Khan-Most-Successful-Entrepreneur-of-Bollywood.jpg"
-            )
-        )
-
-        setAdapter()
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
     }
 
     private fun setAdapter() {
-        val adapter = UserAdapter(list)
+        val adapter = UserAdapter(list, this)
         recyclerView.adapter = adapter
     }
 }

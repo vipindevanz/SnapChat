@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="@dimen/dp_10"
     tools:context=".fragment.UsernameFragment">
 
     <ImageView
         android:id="@+id/imgBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -24,26 +25,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your username"
+            android:text="@string/your_username"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="hxfsfh"
             android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display4"/>
+            android:textSize="@dimen/sp_20" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change my username"
-            android:textColor="@color/blue"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/change_my_username"
+            android:textColor="@color/blue" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -53,11 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:text="Continue"
+        android:layout_margin="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35"
+        android:text="@string/next"
         app:backgroundTint="@color/blue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 
 </RelativeLayout>

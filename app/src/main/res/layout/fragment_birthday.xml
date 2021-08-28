@@ -5,33 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="@dimen/dp_10"
     tools:context=".fragment.BirthdayFragment">
 
     <ImageView
         android:id="@+id/imgBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="When's your birthday?"
+        android:layout_marginTop="@dimen/dp_100"
+        android:text="@string/when_s_your_birthday"
         android:textColor="@color/black"
-        android:textSize="22sp" />
+        android:textSize="@dimen/sp_22" />
 
     <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv1"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="birthday"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="@string/birthday"
         android:textAllCaps="true"
         android:textColor="@color/blue" />
 
@@ -40,33 +41,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv2"
-        android:textColor="@color/black"
-        android:layout_margin="10dp"
-        android:text="26 Aug 2021"/>
+        android:layout_margin="@dimen/dp_10"
+        android:textColor="@color/black" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/light_black"
+        android:layout_height="@dimen/dp_1"
         android:layout_below="@+id/birthDate"
-        android:layout_marginStart="10dp"/>
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/light_black" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="100dp"
-        android:id="@+id/btnContinue"
-        android:paddingStart="30dp"
+        android:layout_marginTop="@dimen/dp_100"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35"
+        android:text="@string/next"
         app:backgroundTint="@color/blue"
-        android:paddingEnd="30dp"
-        android:text="Continue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 
     <DatePicker
+        android:id="@+id/datePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/datePicker"
         android:layout_alignParentBottom="true"
         android:calendarViewShown="false"
         android:datePickerMode="spinner" />

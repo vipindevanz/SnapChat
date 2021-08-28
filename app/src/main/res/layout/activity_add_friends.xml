@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="@dimen/dp_10"
     tools:context=".activity.AddFriendsActivity">
 
     <RelativeLayout
@@ -17,19 +17,21 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Add Friends"
+            android:text="@string/add_friends"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22"
+            tools:ignore="RelativeOverlap" />
 
         <TextView
+            android:id="@+id/done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:id="@+id/done"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Done"
-            android:textAllCaps="true" />
+            android:text="@string/done"
+            android:textAllCaps="true"
+            tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>
 
@@ -37,23 +39,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Add your friends to send Snaps and view their\nStories!"
-        android:textAlignment="center"/>
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/instruction"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Quick add"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/quick_add"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="@dimen/sp_20" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_below="@+id/discover"
+        android:layout_marginTop="@dimen/dp_10">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

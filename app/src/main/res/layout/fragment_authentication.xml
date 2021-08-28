@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
+    android:padding="@dimen/dp_10"
     tools:context=".fragment.AuthenticationFragment">
 
     <ImageView
         android:id="@+id/imgBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/dp_20"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What's your mobile number"
+            android:text="@string/what_s_your_mobile_number"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/sp_22" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Sign up with email instead"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/sign_up_with_email_instead"
             android:textColor="@color/blue" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginTop="20dp"
-            android:text="mobile number"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/mobile_number"
             android:textAllCaps="true"
             android:textColor="@color/blue" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:orientation="horizontal">
 
             <EditText
@@ -55,17 +56,19 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/light_black"
                 android:enabled="false"
-                android:text="IN + 91"
-                android:textColor="@color/blue" />
+                android:text="@string/in_91"
+                android:textColor="@color/blue"
+                tools:ignore="Autofill,LabelFor,TextFields" />
 
             <EditText
+                android:id="@+id/mobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/light_black"
-                android:hint="9848741236"
-                android:id="@+id/mobileNumber"
+                android:hint="@string/_9848741236"
                 android:inputType="number"
-                android:maxLength="10" />
+                android:maxLength="10"
+                tools:ignore="Autofill,LabelFor,TextFields" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -73,8 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginTop="5dp"
-            android:text="We'll send you a text verification code" />
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/we_ll_send_you_a_text_verification_code" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -84,11 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:text="Continue"
+        android:layout_margin="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35"
+        android:text="@string/next"
         app:backgroundTint="@color/blue"
-        app:cornerRadius="100dp" />
+        app:cornerRadius="@dimen/dp_100" />
 
 </RelativeLayout>

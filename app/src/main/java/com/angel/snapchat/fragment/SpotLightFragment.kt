@@ -43,6 +43,7 @@ class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
                         }
                     }
 
+                    list.shuffle()
                     setAdapter()
 
                 }
