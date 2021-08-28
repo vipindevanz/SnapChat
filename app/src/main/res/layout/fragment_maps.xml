@@ -34,7 +34,7 @@
                     android:layout_height="@dimen/dp_50"
                     android:layout_centerInParent="true"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark"
+                    android:src="@drawable/circle_bg_black"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -58,7 +58,7 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/dp_20"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark"
+                    android:src="@drawable/circle_bg_black"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -93,7 +93,7 @@
                     android:layout_height="@dimen/dp_45"
                     android:layout_centerInParent="true"
                     android:alpha="0.2"
-                    android:src="@drawable/circle_bg_dark"
+                    android:src="@drawable/circle_bg_black"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
