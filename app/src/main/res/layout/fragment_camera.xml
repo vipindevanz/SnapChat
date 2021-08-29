@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/topLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,64 +12,65 @@
         android:layout_height="match_parent" />
 
     <RelativeLayout
+        android:id="@+id/ll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ll"
         android:layout_alignParentEnd="true">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.5"
-        android:padding="@dimen/dp_6"
-        android:background="@drawable/rectangle_bg_black"
-        android:layout_margin="@dimen/dp_10"
-        android:orientation="vertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:alpha="0.5"
+            android:background="@drawable/rectangle_bg_black"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_6">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_reverse"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_reverse"
+                tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="@dimen/dp_16"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_flash_off"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@drawable/ic_flash_off"
+                tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="@dimen/dp_16"
-            android:src="@drawable/ic_video"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@drawable/ic_video"
+                tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="@dimen/dp_16"
-            android:src="@drawable/ic_music"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@drawable/ic_music"
+                tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="@dimen/dp_16"
-            android:src="@drawable/ic_arrow_expand"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@drawable/ic_arrow_expand"
+                tools:ignore="ContentDescription" />
 
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </RelativeLayout>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_toStartOf="@+id/ll"
         android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/ll"
         app:contentInsetStart="@dimen/dp_0">
 
         <RelativeLayout
@@ -123,17 +124,6 @@
                     tools:ignore="ContentDescription" />
 
             </RelativeLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="@string/snap_map"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_18"
-                android:textStyle="bold"
-                tools:ignore="RelativeOverlap" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -191,8 +181,8 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_margin="@dimen/dp_25"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_25"
             android:src="@drawable/circle_stroke"
             tools:ignore="ContentDescription" />
 

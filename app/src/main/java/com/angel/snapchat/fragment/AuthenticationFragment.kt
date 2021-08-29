@@ -71,6 +71,7 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
                 if (bundle != null) {
                     intent.putExtras(bundle)
                 }
+                progressBar.visibility = View.GONE
                 startActivity(intent)
             }
         }
@@ -80,6 +81,7 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
         var number = mobileNumber.text.toString().trim()
 
         if (number.isNotEmpty()) {
+            progressBar.visibility = View.VISIBLE
             number = "+91$number"
             sendVerificationCode(number)
         }

@@ -1,10 +1,10 @@
 package com.angel.snapchat.activity
 
-
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.angel.snapchat.R
@@ -14,12 +14,9 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.fragment_authentication.*
 import java.util.concurrent.TimeUnit
 
-
 class LoginActivity : AppCompatActivity() {
-
 
     private lateinit var auth: FirebaseAuth
     lateinit var storedVerificationId: String
@@ -30,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        auth=FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
 //        Reference
         auth = FirebaseAuth.getInstance()
@@ -63,18 +60,15 @@ class LoginActivity : AppCompatActivity() {
             ) {
 
 
-
-
                 Log.d("TAG", "onCodeSent:$verificationId")
                 storedVerificationId = verificationId
                 resendToken = token
 
                 val intent = Intent(this@LoginActivity, VerifyActivity::class.java)
-                var bundle = Bundle()
-                bundle?.putString("verificationId", storedVerificationId)
-                if (bundle != null) {
-                    intent.putExtras(bundle)
-                }
+                val bundle = Bundle()
+                bundle.putString("verificationId", storedVerificationId)
+                intent.putExtras(bundle)
+                progressBar.visibility = View.GONE
                 startActivity(intent)
             }
         }
@@ -84,6 +78,7 @@ class LoginActivity : AppCompatActivity() {
         var number = phoneNumber.text.toString().trim()
 
         if (number.isNotEmpty()) {
+            progressBar.visibility = View.VISIBLE
             number = "+91$number"
             sendVerificationCode(number)
         }
@@ -98,5 +93,4 @@ class LoginActivity : AppCompatActivity() {
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
-
 }
