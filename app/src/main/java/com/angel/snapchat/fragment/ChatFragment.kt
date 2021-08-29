@@ -10,7 +10,6 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_add_friends.recyclerView
 import kotlinx.android.synthetic.main.fragment_chat.*
 import kotlinx.android.synthetic.main.fragment_chat.progressBar
-import kotlinx.android.synthetic.main.fragment_stories.*
 
 class ChatFragment : Fragment(R.layout.fragment_chat) {
 

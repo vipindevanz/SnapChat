@@ -21,7 +21,6 @@ class VideoAdapter(private val mList: List<VideoModel>) : RecyclerView.Adapter<V
         holder.setData(mList[position])
 
         holder.likeView.setOnClickListener { holder.likeView.setImageResource(R.drawable.ic_liked) }
-
     }
 
     override fun getItemCount(): Int {

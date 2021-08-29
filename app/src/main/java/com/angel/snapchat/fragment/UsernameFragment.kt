@@ -2,10 +2,8 @@ package com.angel.snapchat.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.angel.snapchat.R
@@ -23,7 +21,7 @@ class UsernameFragment : Fragment(R.layout.fragment_username) {
 
         val bundle = arguments
 
-        val userName = bundle?.getString("firstName") + "_"+ bundle?.getString("lastName")
+        val userName = bundle?.getString("firstName") + "_" + bundle?.getString("lastName")
 
         username.text = userName
 

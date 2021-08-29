@@ -10,7 +10,8 @@ import com.angel.snapchat.R
 import com.angel.snapchat.model.UserModel
 import com.angel.snapchat.viewholder.UserViewHolder
 
-class UserAdapter(private val list: List<UserModel>, private val context: Context) : RecyclerView.Adapter<UserViewHolder>() {
+class UserAdapter(private val list: List<UserModel>, private val context: Context) :
+    RecyclerView.Adapter<UserViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         return UserViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.user_row_item, parent, false)
@@ -23,7 +24,8 @@ class UserAdapter(private val list: List<UserModel>, private val context: Contex
 
         holder.button.setOnClickListener {
             holder.button.text = "Added"
-            holder.button.backgroundTintList = ContextCompat.getColorStateList(context, R.color.blue)
+            holder.button.backgroundTintList =
+                ContextCompat.getColorStateList(context, R.color.blue)
         }
     }
 
