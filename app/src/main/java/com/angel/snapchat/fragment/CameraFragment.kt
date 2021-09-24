@@ -23,6 +23,8 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Toast.makeText(context, "This feature is not implemented properly", Toast.LENGTH_LONG).show()
+
         if (allPermissionsGranted()) {
 
             startCamera()

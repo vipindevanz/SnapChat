@@ -3,6 +3,7 @@ package com.angel.snapchat.activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -11,16 +12,16 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
 
             if (FirebaseAuth.getInstance().currentUser != null) {
                 startActivity(Intent(applicationContext, MainActivity::class.java))
                 finish()
-                return@postDelayed
             }
 
             val layoutParams = imgLogo.layoutParams as RelativeLayout.LayoutParams
@@ -28,8 +29,7 @@ class SplashActivity : AppCompatActivity() {
             imgLogo.layoutParams = layoutParams
 
             llBottom.visibility = View.VISIBLE
-
-        }, 2000)
+        }, 200)
 
         btnLogIn.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))

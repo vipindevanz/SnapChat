@@ -11,6 +11,7 @@ import com.angel.snapchat.model.UserModel
 import com.angel.snapchat.viewholder.UserViewHolder
 
 class UserAdapter(private val list: List<UserModel>, private val context: Context) :
+
     RecyclerView.Adapter<UserViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         return UserViewHolder(

@@ -12,7 +12,8 @@ import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.activity_verify.*
 
 class VerifyActivity : AppCompatActivity() {
-    lateinit var auth: FirebaseAuth
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,7 @@ class VerifyActivity : AppCompatActivity() {
                 )
                 signInWithPhoneAuthCredential(credential)
             } else {
-                Toast.makeText(this, "Enter OTP", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter OTP", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -45,7 +46,7 @@ class VerifyActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    saveData()
+                    switchToAddFriends()
 
                 } else {
 
@@ -55,12 +56,6 @@ class VerifyActivity : AppCompatActivity() {
                     }
                 }
             }
-    }
-
-    private fun saveData() {
-
-
-        switchToAddFriends()
     }
 
     private fun switchToAddFriends() {

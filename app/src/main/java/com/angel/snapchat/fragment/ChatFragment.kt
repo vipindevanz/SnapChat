@@ -2,13 +2,13 @@ package com.angel.snapchat.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
 import com.angel.snapchat.adapter.UserAdapter
 import com.angel.snapchat.model.UserModel
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_add_friends.recyclerView
-import kotlinx.android.synthetic.main.fragment_chat.*
+import kotlinx.android.synthetic.main.activity_add_friends.*
 import kotlinx.android.synthetic.main.fragment_chat.progressBar
 
 class ChatFragment : Fragment(R.layout.fragment_chat) {
@@ -19,10 +19,14 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Toast.makeText(context, "This feature is not implemented properly", Toast.LENGTH_LONG).show()
+
         buildList()
     }
 
     private fun buildList() {
+
+        // Getting users data from Firebase
 
         reference = FirebaseDatabase.getInstance().getReference("users")
         list = ArrayList()

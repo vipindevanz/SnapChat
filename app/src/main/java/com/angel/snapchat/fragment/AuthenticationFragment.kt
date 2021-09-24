@@ -3,7 +3,6 @@ package com.angel.snapchat.fragment
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -43,8 +42,7 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
         // Callback function for Phone Auth
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
-            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-            }
+            override fun onVerificationCompleted(credential: PhoneAuthCredential) {}
 
             override fun onVerificationFailed(e: FirebaseException) {
                 Toast.makeText(
@@ -62,7 +60,6 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
                 val bundle = arguments
                 bundle?.putString("phone", mobileNumber.text.toString())
 
-                Log.d("TAG", "onCodeSent:$verificationId")
                 storedVerificationId = verificationId
                 resendToken = token
 
@@ -78,6 +75,7 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
     }
 
     private fun login() {
+
         var number = mobileNumber.text.toString().trim()
 
         if (number.isNotEmpty()) {
@@ -96,5 +94,4 @@ class AuthenticationFragment : Fragment(R.layout.fragment_authentication) {
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
-
 }

@@ -26,6 +26,8 @@ class SpotLightFragment : Fragment(R.layout.fragment_spot_light) {
 
     private fun buildList() {
 
+        // Fetching short videos from Firebase
+
         reference = FirebaseDatabase.getInstance().getReference("videos")
         list = ArrayList()
 

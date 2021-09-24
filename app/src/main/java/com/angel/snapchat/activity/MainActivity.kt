@@ -13,10 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Setting nav-graph
+
         val navController = findNavController(R.id.fragmentContainer)
         bottomNav.setupWithNavController(navController)
 
         bottomNav.itemIconTintList = null
-
     }
 }

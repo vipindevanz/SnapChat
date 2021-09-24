@@ -31,6 +31,8 @@ class AddFriendsActivity : AppCompatActivity() {
 
     private fun buildList() {
 
+        // Fetching users from firebase
+
         reference = FirebaseDatabase.getInstance().getReference("users")
         list = ArrayList()
 

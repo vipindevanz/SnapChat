@@ -2,6 +2,7 @@ package com.angel.snapchat.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.angel.snapchat.R
 import com.angel.snapchat.adapter.StoriesAdapter
@@ -17,10 +18,14 @@ class StoriesFragment : Fragment(R.layout.fragment_stories) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Toast.makeText(context, "This feature is not implemented properly", Toast.LENGTH_LONG).show()
+
         buildList()
     }
 
     private fun buildList() {
+
+        // Fetching stories from Firebase
 
         reference = FirebaseDatabase.getInstance().getReference("stories")
         list = ArrayList()
