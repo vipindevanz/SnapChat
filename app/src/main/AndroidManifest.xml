@@ -50,7 +50,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity.SplashActivity"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,5 +60,4 @@
         </activity>
         <activity android:name=".activity.MainActivity" />
     </application>
-
 </manifest>

@@ -15,19 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "220744457606-5lvi1kd6dpsq6mlo2ojkmqgrkir15l89.apps.googleusercontent.com",
+          "client_id": "220744457606-ouo7it40ocfcm3ukv0vnmk6nrgp5u85c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.angel.snapchat",
-            "certificate_hash": "1c18eca98dc8c068cc4f2ccbb599c707988fa8c9"
-          }
-        },
-        {
-          "client_id": "220744457606-lnesqiavq9pb8b15bj6uch5g718tbiib.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.angel.snapchat",
-            "certificate_hash": "bc3b0fee09ff7e04034f837846b9862c23a4e480"
+            "certificate_hash": "11d4224b8717aa4d2ce76ebe7c7bbbeb331c34d3"
           }
         },
         {
