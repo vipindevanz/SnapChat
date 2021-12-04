@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "220744457606-ouo7it40ocfcm3ukv0vnmk6nrgp5u85c.apps.googleusercontent.com",
+          "client_id": "220744457606-4bp2psbmmloeqo5ans9f5q6ruq10mn3a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.angel.snapchat",
-            "certificate_hash": "11d4224b8717aa4d2ce76ebe7c7bbbeb331c34d3"
+            "certificate_hash": "7c7ac8f65d3945a8f8db456335f8ff7a30d72086"
           }
         },
         {
