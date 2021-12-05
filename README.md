@@ -1,20 +1,30 @@
-![GitHub Cards Preview](https://images.ctfassets.net/inb32lme5009/3cAqcJmsSe9htgDMTyXeYU/6791c9fa66c2853d7a26fe359b910bd8/Snapchat_PublicProfiles_Sizzle_Thumbnail_1920x1080__1_.jpeg)
+![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Title_and_3_Columns%5B1%5D.png?alt=media&token=c6dc3d48-d4b2-48ea-ba29-7e752619f95a)
 
-## Tech Stack ✨
-- Firebase 
-- Kotlin
-- CameraX
-- Material UI
-- Navigation component
+###  
+App Name                   | Describe                  | Tech Stack             | Google Play 
+:------------------------: | :------------------------ | :------------------------: | :------------------------: 
+Snapchat Clone | SnapChat is an application where one can share and watch short videos, make friends globally and also can snap pics by applying digital filters. | Android, Kotlin, Firebase, Glide, CameraX, Material UI, Navigation Component | [![Get it on Google Play](https://i.imgur.com/T9HnFlW.png)](https://play.google.com/store/apps/details?id=com.angel.snapchat)
 
-## Used Open Source-Libraries 😎
-- [Glide](https://github.com/bumptech/glide)
-- [Circular Image View](https://github.com/hdodenhof/CircleImageView)
-- [CameraX](https://developer.android.com/jetpack/androidx/releases/camera)
-- [Maps API](https://github.com/googlemaps/google-maps-services-java)
+# Dependencies
 
-## Built With 🚀
-- [Kotlin](https://kotlinlang.org/)
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-bom:28.4.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation("androidx.camera:camera-core:1.0.1")
+    implementation("androidx.camera:camera-camera2:1.0.1")
+    implementation("androidx.camera:camera-lifecycle:1.0.1")
+    implementation("androidx.camera:camera-view:1.0.0-alpha28")
+    implementation("androidx.camera:camera-extensions:1.0.0-alpha28")
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
 
 ## Instructions to clone this project ✌
 1. Open Android Studio.
@@ -24,9 +34,5 @@
 
 ## Here are the some screenshots of the cloned application
 
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(6).png?alt=media&token=5f6cdad9-a42c-426e-ab75-c1fff4304e19)
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(7).png?alt=media&token=af4d91a8-bff8-4659-bbc7-2f3a83756afd)
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(8).png?alt=media&token=201da55f-1106-49e9-9d6e-9c1df40309e9)
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(9).png?alt=media&token=f08398cb-dfed-4807-bb27-57e6a2e646bb)
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(5).png?alt=media&token=9f644a92-e467-46ec-8684-621bc03a87a8)
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/ajio-f9ef3.appspot.com/o/splash%20screen%20(10).png?alt=media&token=0b2e0916-c11d-4f46-b152-aba1540a6419)
+![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Untitled%20design%20(10).png?alt=media&token=7f964f75-90e9-4807-ba4c-92ee1edfea62)
+![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Untitled%20design%20(11).png?alt=media&token=b2d77b36-3019-482e-a37e-e25f0d62a45b)
