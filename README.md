@@ -3,7 +3,7 @@
 ###  
 App Name                   | Describe                  | Tech Stack             | Google Play 
 :------------------------: | :------------------------ | :------------------------: | :------------------------: 
-Snapchat Clone | SnapChat is an application where one can share and watch short videos, make friends globally and also can snap pics by applying digital filters. | Android, Kotlin, Firebase, Glide, CameraX, Material UI, Navigation Component | [![Get it on Google Play](https://i.imgur.com/T9HnFlW.png)](https://play.google.com/store/apps/details?id=com.angel.snapchat)
+Snapchat Clone | SnapChat is an application where one can share and watch short videos, make friends globally and also can snap pics by applying digital filters. | Android, Kotlin, Firebase, Glide, CameraX, Material UI, Navigation Component | [![Get it on Google Play](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/T9HnFlW.png?alt=media&token=b46055e4-3b02-424f-9e88-862543831a8b)](https://play.google.com/store/apps/details?id=com.angel.snapchat)
 
 # Dependencies
 
