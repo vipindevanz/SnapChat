@@ -17,19 +17,21 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        val layoutParams = imgLogo.layoutParams as RelativeLayout.LayoutParams
+        layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE)
+        imgLogo.layoutParams = layoutParams
+
         Handler(Looper.getMainLooper()).postDelayed({
 
             if (FirebaseAuth.getInstance().currentUser != null) {
                 startActivity(Intent(applicationContext, MainActivity::class.java))
                 finish()
+
+            } else {
+
+                llBottom.visibility = View.VISIBLE
             }
-
-            val layoutParams = imgLogo.layoutParams as RelativeLayout.LayoutParams
-            layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE)
-            imgLogo.layoutParams = layoutParams
-
-            llBottom.visibility = View.VISIBLE
-        }, 200)
+        }, 2000)
 
         btnLogIn.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
